@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">Not Rendered!</div>
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script>
+        //React.createElement takes 3 arguments
+        //first is the element you want to create like in this case is "h1"
+        //second is an empty object here to give somme attributes like id and class
+        //third is what you want to put in this object
+        const heading = React.createElement("h1", {
+            id:"title", class: "title"
+        }, "Namase Everyone from React!");
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(heading);
+    </script>
+</body>
+</html>
