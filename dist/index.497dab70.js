@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"adBpN":[function(require,module,exports) {
+})({"jM982":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "138b6a135baa4167";
+module.bundle.HMR_BUNDLE_ID = "dbf67c70497dab70";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -2948,8 +2948,6 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-var _foodFireLogoPng = require("./Images/Food Fire Logo.png");
-var _foodFireLogoPngDefault = parcelHelpers.interopDefault(_foodFireLogoPng);
 /* My Food App structure will look like this, 
             1) Header
                 - Logo
@@ -2971,16 +2969,16 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             className: "logo",
-            src: (0, _foodFireLogoPngDefault.default),
+            src: "Food Fire Logo.png",
             alt: "Food Fire Logo"
         }, void 0, false, {
             fileName: "app.js",
-            lineNumber: 25,
+            lineNumber: 24,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "app.js",
-        lineNumber: 24,
+        lineNumber: 23,
         columnNumber: 21
     }, undefined);
 _c = Title;
@@ -2991,7 +2989,7 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 31,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3002,21 +3000,21 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "app.js",
-                            lineNumber: 34,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About"
                         }, void 0, false, {
                             fileName: "app.js",
-                            lineNumber: 35,
+                            lineNumber: 34,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact"
                         }, void 0, false, {
                             fileName: "app.js",
-                            lineNumber: 36,
+                            lineNumber: 35,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -3024,29 +3022,29 @@ const Header = ()=>{
                                 class: "fa-solid fa-cart-shopping"
                             }, void 0, false, {
                                 fileName: "app.js",
-                                lineNumber: 37,
+                                lineNumber: 36,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "app.js",
-                            lineNumber: 37,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "app.js",
-                    lineNumber: 33,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 32,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 30,
+        lineNumber: 29,
         columnNumber: 10
     }, undefined);
 };
@@ -4909,28 +4907,28 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, area, lastMileTrave
                 src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1707,
+                lineNumber: 1706,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: name
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1708,
+                lineNumber: 1707,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: cuisines.join(", ")
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1709,
+                lineNumber: 1708,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: area
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1710,
+                lineNumber: 1709,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -4941,40 +4939,40 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, area, lastMileTrave
                                 class: "fa-solid fa-star"
                             }, void 0, false, {
                                 fileName: "app.js",
-                                lineNumber: 1712,
+                                lineNumber: 1711,
                                 columnNumber: 11
                             }, undefined),
                             avgRating
                         ]
                     }, void 0, true, {
                         fileName: "app.js",
-                        lineNumber: 1712,
+                        lineNumber: 1711,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                         children: lastMileTravelString
                     }, void 0, false, {
                         fileName: "app.js",
-                        lineNumber: 1713,
+                        lineNumber: 1712,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                         children: costForTwoString
                     }, void 0, false, {
                         fileName: "app.js",
-                        lineNumber: 1714,
+                        lineNumber: 1713,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "app.js",
-                lineNumber: 1711,
+                lineNumber: 1710,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 1706,
+        lineNumber: 1705,
         columnNumber: 10
     }, undefined);
 };
@@ -4989,13 +4987,13 @@ const Body = ()=>{
                 ...restaurant.data
             }, restaurant.data.id, false, {
                 fileName: "app.js",
-                lineNumber: 1724,
+                lineNumber: 1723,
                 columnNumber: 14
             }, undefined);
         })
     }, void 0, false, {
         fileName: "app.js",
-        lineNumber: 1722,
+        lineNumber: 1721,
         columnNumber: 10
     }, undefined);
 };
@@ -5010,23 +5008,23 @@ const Footer = ()=>{
                 class: "fa-solid fa-heart"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1733,
+                lineNumber: 1732,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                href: "",
+                href: "https://www.linkedin.com/in/chetannada/",
                 target: "_blank",
-                children: "Kartik Narang"
+                children: "Chetan Nada"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1734,
+                lineNumber: 1733,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
                 class: "fa-solid fa-copyright"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1737,
+                lineNumber: 1736,
                 columnNumber: 7
             }, undefined),
             "2023",
@@ -5037,19 +5035,19 @@ const Footer = ()=>{
                         children: "Fire"
                     }, void 0, false, {
                         fileName: "app.js",
-                        lineNumber: 1739,
+                        lineNumber: 1738,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "app.js",
-                lineNumber: 1738,
+                lineNumber: 1737,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 1731,
+        lineNumber: 1730,
         columnNumber: 10
     }, undefined);
 };
@@ -5060,23 +5058,23 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1747,
+                lineNumber: 1746,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1748,
+                lineNumber: 1747,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 1749,
+                lineNumber: 1748,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 1746,
+        lineNumber: 1745,
         columnNumber: 10
     }, undefined);
 };
@@ -5084,7 +5082,7 @@ _c5 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 1753,
+    lineNumber: 1752,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3, _c4, _c5;
@@ -5100,7 +5098,7 @@ $RefreshReg$(_c5, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Images/Food Fire Logo.png":"4rKmH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -29287,44 +29285,6 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"4rKmH":[function(require,module,exports) {
-module.exports = require("6cc891d8a386affc").getBundleURL("1G2bZ") + "Food Fire Logo.d6729f87.png" + "?" + Date.now();
-
-},{"6cc891d8a386affc":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
 },{}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
@@ -29493,6 +29453,6 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}]},["adBpN","1xC6H","igcvL"], "igcvL", "parcelRequire830b")
+},{"7422ead32dcc1e6b":"786KC"}]},["jM982","1xC6H","igcvL"], "igcvL", "parcelRequire830b")
 
-//# sourceMappingURL=index.5baa4167.js.map
+//# sourceMappingURL=index.497dab70.js.map
