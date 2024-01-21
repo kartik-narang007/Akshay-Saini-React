@@ -1,17 +1,26 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #root {
-  margin: 10px 10px;
+  margin: 10px;
 }
 
 .header {
+  width: 1450px;
+  margin: 0px auto;
   display: flex;
   justify-content: space-between;
-  padding: 0px 30px;
+  padding: 0 30px;
   border: 1px solid black;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.header:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -30,69 +39,76 @@
   font-size: 18px;
 }
 
-.res-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  /* justify-content: space-between; */
-}
-
-.res-card {
-  height: 330px;
-  width: 200px;
-  /* border: 2px solid black; */
-  background-color: #f0f0f0;
-  padding: 10px;
-  transition: width 0.3s, height 0.3s;
-}
-
-.res-card:hover{
-  outline: 2px solid black;
+.nav-items > ul > li:hover,
+.nav-items ul li:hover {
   cursor: pointer;
 }
 
-.search {
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.res-card {
+  height: 350px;
+  width: 220px;
   padding: 10px;
+  outline: 2px solid white;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 25px;
+}
+
+.res-card:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: whitesmoke;
+  cursor: pointer;
 }
 
 .res-card > img {
   height: 150px;
   width: 100%;
+  border-radius: 10px;
 }
 
 .res-card h3 {
   font-size: 22px;
-  margin: 8px 0px 6px 0;
+  margin: 8px 0 6px;
 }
 
-.res-card > .cuisines{
+.res-card > .cuisines {
   font-weight: lighter;
 }
 
 .res-card > .res-ratings {
-  padding: 4px 0px;
+  padding: 4px 0;
   font-size: 18px;
   display: inline;
 }
 
-.res-card > .star{
+.res-card > .star {
   position: relative;
   bottom: 1px;
   font-size: 16px;
 }
 
-.res-card> .time{
+.res-card > .time {
   font-size: 14px;
-  padding:2px;
+  padding: 2px;
   display: inline;
   margin-left: 5px;
 }
 
-
-.res-card > .area,  .res-card > .distance{
+.res-card > .area,
+.res-card > .distance {
   display: inline;
 }
 
-.res-card > .distance{
+.res-card > .distance {
   margin-left: 5px;
 }

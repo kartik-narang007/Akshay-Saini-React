@@ -76,7 +76,6 @@ const RestaurantCard = (props) => {
 const Body = () => {
   return (
     <div className="body">
-      <div className="search">Search</div>
       <div className="res-container">
         {resArray.map((resObj) => (
           <RestaurantCard key={resObj.info.id} resObj={resObj} />
