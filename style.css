@@ -112,3 +112,7 @@
 .res-card > .distance {
   margin-left: 5px;
 }
+
+.filter-btn{
+  margin: 20px 0px 0px 30px;
+}
