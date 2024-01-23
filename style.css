@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  color: #333; /* Dark gray for regular text */
+  font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+}
+
 #root {
   margin: 10px;
 }
@@ -14,9 +19,11 @@
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
-  border: 1px solid black;
+  border: 1px solid #e84855; /* Swiggy red */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
+  /* background-color: #e84855; Swiggy red */
+  color: #fff; /* White text for the header */
 }
 
 .header:hover {
@@ -37,11 +44,14 @@
   margin: 10px;
   padding: 10px;
   font-size: 18px;
+  color: #333; /* Dark gray for navigation text */
 }
 
 .nav-items > ul > li:hover,
 .nav-items ul li:hover {
   cursor: pointer;
+  color: #e84855; 
+  /* Swiggy red for highlighted navigation text on hover */
 }
 
 .res-container {
@@ -51,11 +61,11 @@
 }
 
 .res-card {
-  height: 350px;
+  height: 400px;
   width: 220px;
   padding: 10px;
-  outline: 2px solid white;
-  background-color: white;
+  outline: 2px solid #fff; /* White */
+  background-color: #fff; /* White */
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -66,7 +76,7 @@
 
 .res-card:hover {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: whitesmoke;
+  background-color: #f7f7f7; /* Light gray on hover */
   cursor: pointer;
 }
 
@@ -79,6 +89,7 @@
 .res-card h3 {
   font-size: 22px;
   margin: 8px 0 6px;
+  color: #333; /* Dark gray for restaurant card details */
 }
 
 .res-card > .cuisines {
@@ -113,6 +124,141 @@
   margin-left: 5px;
 }
 
-.filter-btn{
-  margin: 20px 0px 0px 30px;
+.filter{
+  display: flex;
 }
+
+.search-box{
+  margin: 20px 0px 0px 30px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 330px;
+}
+
+.search-btn{
+  margin: 20px 0px 0px 30px;
+  color: #e84855; /* White text for filter button */
+  background-color: #fff; /* Swiggy red for the button background */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-btn:hover {
+  background-color: #e84855;
+  color: white;
+}
+
+.filter-btn {
+  margin: 20px 0px 0px 40px;
+  color: #fff; /* White text for filter button */
+  background-color: #e84855; /* Swiggy red for the button background */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #d33744; /* Slightly darker red on hover */
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.shimmer-card {
+  height: 400px;
+  width: 220px;
+  padding: 10px;
+  outline: 2px solid #fff; /* White */
+  background-color: #fff; /* White */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 25px;
+
+  /* Shimmer Animation Styles */
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, #f0f0f0 50%, transparent 100%);
+  animation: shimmerAnimation 1.5s infinite linear;
+}
+
+@keyframes shimmerAnimation {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+
+.login{
+  margin: 5px 10px 5px 8px;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+  background-color: #e84855;
+  width: 100px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.login:hover{
+  background-color: #d33744;
+  border-color: black;
+}
+
+.logout{
+  margin: 5px 2px;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+  background-color: #e84855;
+  width: 100px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
