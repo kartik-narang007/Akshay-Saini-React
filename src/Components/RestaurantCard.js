@@ -6,7 +6,6 @@ export const RestaurantCard = (props) => {
     // console.log(resObj);
     const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, locality, sla } =
       resObj?.info;
-  
     return (
       <div className="res-card">
         <img

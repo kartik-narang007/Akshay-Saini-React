@@ -1,12 +1,13 @@
 import { RestaurantCard } from "./RestaurantCard.js";
 import { useEffect, useState } from "react";
-import {Shimmer} from "./Shimmer.js";
+import { Shimmer } from "./Shimmer.js";
+import { Link } from "react-router-dom";
 
 export const Body = () => {
   const [listOfRestaurants, setlistOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
   useEffect(() => {
     fetchData();
   }, []);
@@ -15,26 +16,23 @@ export const Body = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=29.9093759&lng=73.87998050000002&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-
     const json = await data.json();
     console.log(json);
     const restaurantsArrayCard2 =
-      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants || [];
-        console.log(restaurantsArrayCard2)
+    console.log(restaurantsArrayCard2);
     const restaurantsArrayCard4 =
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants || [];
-        console.log(restaurantsArrayCard4);
+    console.log(restaurantsArrayCard4);
 
     // Concatenate the two arrays
     const concatenatedArray = restaurantsArrayCard4.concat(
       restaurantsArrayCard2
     );
     // console.log(concatenatedArray);
-    setlistOfRestaurants(
-      concatenatedArray
-    );
+    setlistOfRestaurants(concatenatedArray);
     // console.log(concatenatedArray);
     setFilteredRestaurants(concatenatedArray);
     // console.log(filteredRestaurants);
@@ -45,36 +43,52 @@ export const Body = () => {
   //   return <Shimmer/>
   // }
 
-  return loading ? <Shimmer/> : (
+  return loading ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <div className="search">
-          <input type="text" className="search-box" value={searchValue} onChange={(e)=>{
-            setSearchValue(e.target.value);
-          }}/>
-          <button className="search-btn" onClick={()=>{
-            const filteredList = listOfRestaurants.filter((res)=>{
-              return res.info.name.toLowerCase().includes(searchValue.toLowerCase());
-            });
-            setFilteredRestaurants(filteredList);
-          }}>Search</button>
+          <input
+            type="text"
+            className="search-box"
+            value={searchValue}
+            onChange={(e) => {
+              setSearchValue(e.target.value);
+            }}
+          />
+          <button
+            className="search-btn"
+            onClick={() => {
+              const filteredList = listOfRestaurants.filter((res) => {
+                return res.info.name
+                  .toLowerCase()
+                  .includes(searchValue.toLowerCase());
+              });
+              setFilteredRestaurants(filteredList);
+            }}
+          >
+            Search
+          </button>
         </div>
-      <button
-        className="filter-btn"
-        onClick={() => {
-          // Filter Logic
-          const newlistOfRestaurants = listOfRestaurants.filter(
-            (res) => res.info.avgRating > 4
-          );
-          setFilteredRestaurants(newlistOfRestaurants);
-        }}
-      >
-        Top Rated Restaurants
-      </button>
+        <button
+          className="filter-btn"
+          onClick={() => {
+            // Filter Logic
+            const newlistOfRestaurants = listOfRestaurants.filter(
+              (res) => res.info.avgRating > 4
+            );
+            setFilteredRestaurants(newlistOfRestaurants);
+          }}
+        >
+          Top Rated Restaurants
+        </button>
       </div>
       <div className="res-container">
-        {filteredRestaurants.map((resObj,index) => (
-          <RestaurantCard key={index} resObj={resObj} />
+        {filteredRestaurants.map((resObj, index) => (
+          <Link key={index} to={"/restaurant/" + resObj.info.id}>
+            <RestaurantCard resObj={resObj} />
+          </Link>
         ))}
       </div>
     </div>

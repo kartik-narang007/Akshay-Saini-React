@@ -1,57 +1,71 @@
-* {
+*{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  color: #333; /* Dark gray for regular text */
-  font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+.app{
+  
+  margin: 20px auto;
+  width: 90%;
+
 }
 
-#root {
-  margin: 10px;
-}
-
-.header {
-  width: 1450px;
-  margin: 0px auto;
+.header{
+  /* border: 2px solid black; */
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
-  border: 1px solid #e84855; /* Swiggy red */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-  /* background-color: #e84855; Swiggy red */
-  color: #fff; /* White text for the header */
+  /* border: 1px solid #e84855; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.header:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+.body{
+  padding: 0px 30px;
 }
 
-.logo {
-  width: 150px;
+.header > .logo-container > .logo{
+  width: 110px;
+  transition: box-shadow 0.3s ease;
 }
 
-.nav-items > ul {
+
+.header > .nav-items > ul{
   display: flex;
   list-style-type: none;
-  padding-top: 25px;
+  margin-top: 12px;
 }
 
-.nav-items > ul > li {
-  margin: 10px;
-  padding: 10px;
+.header > .nav-items > ul > li{
+padding: 10px;
+margin: 10px;
+} 
+.header > .nav-items> ul > li > a{
   font-size: 18px;
-  color: #333; /* Dark gray for navigation text */
+  text-decoration: none;
+  color: #333;
 }
 
-.nav-items > ul > li:hover,
-.nav-items ul li:hover {
+.header > .nav-items> ul > li > a:hover{
   cursor: pointer;
-  color: #e84855; 
-  /* Swiggy red for highlighted navigation text on hover */
+  color: #e84855;
+}
+
+.header > .nav-items > ul > .login{
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 7px;
+  background-color: #e84855;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.header > .nav-items > ul > .login:hover{
+  cursor: pointer;
+  background-color: #d33744;
 }
 
 .res-container {
@@ -60,9 +74,13 @@ body {
   justify-content: flex-start;
 }
 
-.res-card {
-  height: 400px;
-  width: 220px;
+.res-container > a{
+  text-decoration: none;
+}
+.res-container > a >.res-card {
+  color: #333;
+  height: 370px;
+  width: 180px;
   padding: 10px;
   outline: 2px solid #fff; /* White */
   background-color: #fff; /* White */
@@ -74,7 +92,7 @@ body {
   margin-top: 25px;
 }
 
-.res-card:hover {
+.res-container > a >.res-card:hover {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   background-color: #f7f7f7; /* Light gray on hover */
   cursor: pointer;
@@ -132,7 +150,7 @@ body {
   margin: 20px 0px 0px 30px;
   padding: 10px 20px;
   border-radius: 10px;
-  width: 330px;
+  width: 200px;
 }
 
 .search-btn{
@@ -261,4 +279,3 @@ body {
   font-size: 15px;
   font-weight: bold;
 }
-
