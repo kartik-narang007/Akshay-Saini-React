@@ -6,7 +6,7 @@ export const Error = () =>{
         <div>
             <h2>Oops!</h2>
             <h2>Something went wrong!</h2>
-            <h3>{`${err.status} : ${err.status.message}`}</h3>
+            <h3>{`${err}`}</h3>
         </div>
     )
 }

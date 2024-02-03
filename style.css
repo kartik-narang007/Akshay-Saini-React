@@ -279,3 +279,8 @@ margin: 10px;
   font-size: 15px;
   font-weight: bold;
 }
+
+
+.user-card{
+  border: 2px solid black;
+}
