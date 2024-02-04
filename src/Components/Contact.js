@@ -1,7 +1,3 @@
 export const Contact = () =>{
-    return(
-        <div>
-            <h3>Our Contact Detail is being Rendered on This Page.</h3>
-        </div>
-    )
+    return <h1 className="text-xl font-bold text-center">Contact Us</h1>;
 }
