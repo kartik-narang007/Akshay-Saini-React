@@ -14,7 +14,7 @@ export const RestaurantCard = (props) => {
     sla,
   } = resObj?.info;
   return (
-    <div className="m-4 p-4 w-[250px] bg-gray-50 hover:bg-gray-200">
+    <div className="m-4 p-4 w-[250px] bg-gray-50 hover:bg-gray-200 rounded-lg">
       <img className="rounded-lg h-40 w-56" src={CON_URL + cloudinaryImageId} alt={name} />
       <h3 className="font-bold py-3 text-xl">{name}</h3>
       <h4 className="cuisines">{cuisines.join(", ")}</h4>

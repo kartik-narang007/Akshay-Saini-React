@@ -1,8 +1,8 @@
 import { RestaurantCard, withPromotedLabel } from "./RestaurantCard.js";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Shimmer } from "./Shimmer.js";
 import { Link } from "react-router-dom";
-
+import UserContext from "../utils/userContext.js";
 
 export const Body = () => {
   const [listOfRestaurants, setlistOfRestaurants] = useState([]);
@@ -10,7 +10,7 @@ export const Body = () => {
   const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState("");
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
-
+  const { setUserName, loggedInUser } = useContext(UserContext);
   useEffect(() => {
     fetchData();
   }, []);
@@ -20,15 +20,12 @@ export const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=29.9093759&lng=73.87998050000002&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
     const restaurantsArrayCard2 =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants || [];
-    console.log(restaurantsArrayCard2);
     const restaurantsArrayCard4 =
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants || [];
-    console.log(restaurantsArrayCard4);
 
     // Concatenate the two arrays
     const concatenatedArray = restaurantsArrayCard4.concat(
@@ -87,15 +84,25 @@ export const Body = () => {
           >
             Top Rated Restaurants
           </button>
+          <input
+            className="border border-black p-2"
+            value={loggedInUser}
+            onChange={(e)=>setUserName(e.target.value)}
+          ></input>
         </div>
       </div>
       <div className="flex flex-wrap px-10 m-0">
         {filteredRestaurants.map((resObj, index) => (
           <Link key={index} to={"/restaurant/" + resObj.info.id}>
-            {resObj.info.veg? <RestaurantCardPromoted resObj = {resObj}/> : <RestaurantCard resObj={resObj}/>}
+            {resObj.info.veg ? (
+              <RestaurantCardPromoted resObj={resObj} />
+            ) : (
+              <RestaurantCard resObj={resObj} />
+            )}
           </Link>
         ))}
       </div>
     </div>
   );
 };
+ 

@@ -1,19 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { LOGO_URL } from "../utils/content";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import logoImage from "../../images/logo.png"
+import UserContext from "../utils/userContext";
 export const Header = () => {
-  
+  const {loggedInUser} = useContext(UserContext);
+  console.log(loggedInUser);
   const [btnNameReact, setBtnNameReact] = useState("Login");
   useEffect(()=>{
-    console.log("useEffect in Header Called");
+    // console.log("useEffect in Header Called");
   },[btnNameReact]);
   const onlineStatus = useOnlineStatus();
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg m-2 sm:bg-yellow-50 lg:bg-green-50">
       {/* Logo */}
       <div className="logo-container">
-        <img style={ {width: '130px'}} className="" src={LOGO_URL} />
+        <img style={ {width: '130px'}} className="" src={logoImage} />
       </div>
 
       {/* Nav Items */}
@@ -33,7 +36,7 @@ export const Header = () => {
           }}>
             {btnNameReact}
           </button>
-
+          <li className="px-4 font-bold">{loggedInUser}</li>
           {/* <button className="logout">LogOut</button> */}
         </ul>
       </div>
