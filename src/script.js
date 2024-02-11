@@ -8,6 +8,9 @@ const About = lazy(() => import("./Components/About"));
 import { Contact } from "./Components/contact";
 import { RestaurantMenu } from "./Components/RestaurantMenu";
 import UserContext from "./utils/userContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./Components/Cart";
 // console.log(resArray)
 
 /*
@@ -34,15 +37,17 @@ const AppLayout = () => {
   useEffect(() => {
     const data = { name: "Kartik Narang" };
     setUserName(data.name);
-  },[]);
+  }, []);
   return (
-    <UserContext.Provider value = {{loggedInUser:userName, setUserName}}>
-    <div className="app">
-      {/* //Header //Body //Footer */}
-      <Header />
-      <Outlet />
-    </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          {/* //Header //Body //Footer */}
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider> 
   );
 };
 
@@ -79,6 +84,10 @@ const appRouter = createBrowserRouter([
           </Suspense>
         ),
       },
+      {
+        path:"/cart",
+        element: <Cart/>
+      }
     ],
     errorElement: <Error />,
   },

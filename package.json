@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "serve": "parcel serve index.html"
   },
   "author": "Kartik Narang",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.1.0",
     "onchange": "^7.1.0",
     "parcel": "^2.11.0",
-    "postcss": "^8.4.33",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.21.3"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1"
   }
 }
