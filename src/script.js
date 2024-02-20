@@ -5,7 +5,7 @@ import { Body } from "./Components/Body";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import { Error } from "./Components/Error";
 const About = lazy(() => import("./Components/About"));
-import { Contact } from "./Components/contact";
+import { Contact } from "./Components/Contact";
 import { RestaurantMenu } from "./Components/RestaurantMenu";
 import UserContext from "./utils/userContext";
 import { Provider } from "react-redux";
@@ -70,7 +70,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: <Contact/>,
       },
       {
         path: "/restaurant/:resId",

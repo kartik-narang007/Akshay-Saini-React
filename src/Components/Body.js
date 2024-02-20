@@ -17,9 +17,10 @@ export const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=29.9093759&lng=73.87998050000002&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=29.9093759&lng=77.594566&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+    // console.log(json);
     const restaurantsArrayCard2 =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants || [];
@@ -95,9 +96,9 @@ export const Body = () => {
         {filteredRestaurants.map((resObj, index) => (
           <Link key={index} to={"/restaurant/" + resObj.info.id}>
             {resObj.info.veg ? (
-              <RestaurantCardPromoted resObj={resObj} />
+              <RestaurantCardPromoted resObj={resObj.info} />
             ) : (
-              <RestaurantCard resObj={resObj} />
+              <RestaurantCard resObj={resObj.info} />
             )}
           </Link>
         ))}

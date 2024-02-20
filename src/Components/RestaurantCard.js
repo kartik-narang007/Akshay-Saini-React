@@ -1,6 +1,7 @@
 import { CON_URL } from "../utils/content";
 
 export const RestaurantCard = (props) => {
+  
   // console.log(props);
   const { resObj } = props;
   // console.log(resObj);
@@ -12,7 +13,7 @@ export const RestaurantCard = (props) => {
     costForTwo,
     locality,
     sla,
-  } = resObj?.info;
+  } = resObj;
   return (
     <div className="m-4 p-4 w-[250px] bg-gray-50 hover:bg-gray-200 rounded-lg">
       <img className="rounded-lg h-40 w-56" src={CON_URL + cloudinaryImageId} alt={name} />

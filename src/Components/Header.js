@@ -46,7 +46,7 @@ export const Header = () => {
           <li className="px-5"><Link to="/">Home</Link></li>
           <li className="px-5"><Link to="/about">About Us</Link></li>
           <li className="px-5"><Link to="/contact">Contact Us</Link></li>
-          <li className="px-5 font-bold"><Link to="/cart">Cart({cartItems.length} items)</Link></li>
+          <li className="px-5 font-bold"><Link to="/cart">Cart - ({cartItems.length} items)</Link></li>
           <li className="px-5"><Link to="/grocery">Grocery</Link></li>
           <button className="login" onClick={() => {
             btnNameReact === "Login"
